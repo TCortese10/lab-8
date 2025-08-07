@@ -39,9 +39,17 @@ console.log("");
 
 console.log("Part 3: Using Destructuring Assignment");
 console.log("--------------------------------------");
-let { name, courses } = student;
+let { name, courses } = student; //destructuting name and courses from student
 let scores = [77, 91, 88, 56, 73];
 let [firstScore, secondScore] = scores;
-
 console.log(firstScore); 
 console.log(secondScore);  
+console.log("");
+
+console.log("Part 4: The Spread Operator");
+console.log("----------------------------");
+let copiedStudent = { ...student, graduationYear: 2030 }; //copy original object and added grad year 2030
+console.log(copiedStudent.graduationYear); //output grad year
+let courses2 = ["History", "English", "Politics"];
+let combinedArr = [ ...student.courses, ...courses2]; //combining courses
+console.log(combinedArr); //log updated list

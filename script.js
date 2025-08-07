@@ -13,6 +13,7 @@ let student = {
         console.log("Courses: " +  this.courses);
 
     }
+
 };
 
 //displays information to the console
@@ -53,3 +54,18 @@ console.log(copiedStudent.graduationYear); //output grad year
 let courses2 = ["History", "English", "Politics"];
 let combinedArr = [ ...student.courses, ...courses2]; //combining courses
 console.log(combinedArr); //log updated list
+console.log("");
+
+console.log("Part 5: Object Methods");
+console.log("-----------------------");
+student.addCourse = function() { //creates new method for the student object, aadds course
+    this.courses.push("Advanced Statistics");
+};
+student.addCourse();
+console.log("Output of student object with added course method:")
+console.log(student.courses);
+student.getTotalCourses = function() {
+    return this.courses.length;
+};
+let total = student.getTotalCourses();
+console.log("Total Courses: " + total);
